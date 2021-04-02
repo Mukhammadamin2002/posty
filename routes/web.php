@@ -13,7 +13,7 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/users/{user}/posts', [UserPostController::class, 'index'])->name('users.posts');
+Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])->name('users.posts');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
